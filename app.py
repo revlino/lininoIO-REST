@@ -2,7 +2,7 @@
 
 import sys
 import web
-import lininoIO.gpio
+import modules.gpio
 
 urls = (
 	'/gpio(.*)', 'GPIO'
@@ -40,7 +40,7 @@ class GPIO:
 			if len(args) == 3:
 				
 				try:
-					return lininoIO.gpio.pinMode(*args[1:])
+					return modules.gpio.pinMode(*args[1:])
 					
 				except:
 					return sys.exc_info()[1]
@@ -48,7 +48,7 @@ class GPIO:
 			if len(args) == 2:
 				
 				try:
-					return lininoIO.gpio.read_direction(*args[1:])
+					return modules.gpio.read_direction(*args[1:])
 					
 				except:
 					return sys.exc_info()[1]
@@ -60,7 +60,7 @@ class GPIO:
 			if len(args) == 2:
 				
 				try:
-					return lininoIO.gpio.export(*args[1:])
+					return modules.gpio.export(*args[1:])
 					
 				except:
 					return sys.exc_info()[1]
@@ -72,7 +72,7 @@ class GPIO:
 			if len(args) == 2:
 				
 				try:
-					return lininoIO.gpio.unexport(*args[1:])
+					return modules.gpio.unexport(*args[1:])
 					
 				except:
 					return sys.exc_info()[1]
@@ -84,7 +84,7 @@ class GPIO:
 			if len(args) == 3:
 				
 				try:
-					return lininoIO.gpio.write_direction(*args[1:])
+					return modules.gpio.write_direction(*args[1:])
 					
 				except:
 					return sys.exc_info()[1]
@@ -92,7 +92,7 @@ class GPIO:
 			if len(args) == 2:
 				
 				try:
-					return lininoIO.gpio.read_direction(*args[1:])
+					return modules.gpio.read_direction(*args[1:])
 					
 				except:
 					return sys.exc_info()[1]
@@ -104,7 +104,7 @@ class GPIO:
 			if len(args) == 2:
 
 				try:
-					return lininoIO.gpio.write_value(*args)
+					return modules.gpio.write_value(*args)
 					
 				except:
 					return sys.exc_info()[1]				
@@ -112,7 +112,7 @@ class GPIO:
 			if len(args) == 1:
 
 				try:
-					return lininoIO.gpio.read_value(*args)
+					return modules.gpio.read_value(*args)
 					
 				except:
 					return sys.exc_info()[1]
