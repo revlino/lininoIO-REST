@@ -76,11 +76,45 @@ def read_value(pin):
 	
 		# read value
 		f = open('/sys/bus/iio/devices/iio:device0/in_voltage_%s_raw' % pins[pin]['name'],'r')
-		value = f.read().strip()
+		value = int(f.read().strip())
 		f.close()
 		
 	except IOError:
 		
 		raise PinError("Analog pins are not enabled.")
 
-	return value	
+	return value
+
+
+def read_scale(pin):
+
+	# vars
+	pins = pin_map()
+	pin = get_pin(pin)
+	
+	try:
+	
+		# read value
+		f = open('/sys/bus/iio/devices/iio:device0/in_voltage_%s_scale' % pins[pin]['name'],'r')
+		value = int(f.read().strip())
+		f.close()
+		
+	except IOError:
+		
+		raise PinError("Analog pins are not enabled.")
+
+	return value
+	
+	
+def read_voltage(pin):
+	
+	return read_value(pin) * read_scale(pin)
+
+
+
+''' These methods emulate native Arduino C functions
+'''	
+	
+def analogRead(pin):
+	
+	return read_value(pin)
