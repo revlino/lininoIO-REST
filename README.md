@@ -1,5 +1,4 @@
-REST API for LininoIO
-=====
+#REST API for LininoIO
 This is a complete REST API for controlling an Arduino Yun, Linino One, or similar device.
 
 Requirements:
