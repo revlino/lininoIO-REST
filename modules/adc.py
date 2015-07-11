@@ -57,7 +57,7 @@ def get_pin(pin):
 def export():
 	
 	try:
-		f.open('/sys/bus/iio/devices/iio:device0/enable', 'w')
+		f = open('/sys/bus/iio/devices/iio:device0/enable', 'w')
 		f.write('1')
 		f.close()
 	
