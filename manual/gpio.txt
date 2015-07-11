@@ -1,3 +1,9 @@
+########################################
+#
+#	GPIO - General Purpose Input/Output
+#
+########################################
+
 Export GPIO pin and declare a mode (direction)
 
 	url:		/gpio/mode/$pin/$mode
@@ -70,3 +76,4 @@ Write direction of a GPIO pin.
 	mode: 	in or out
 	
 	returns: 	nothing or error
+
