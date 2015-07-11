@@ -12,7 +12,7 @@ Requirements:
 Setup:
 - Unpack the package in /opt
 - Start the server with the following command:
-  python /opt/lininoIO_REST.py
+  python /opt/lininoIO_REST/app.py
 - Access the API:
   http://arduino.local:8080/
 
