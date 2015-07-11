@@ -1,5 +1,5 @@
 #REST API for LininoIO
-This is a complete REST API for controlling an Arduino Yun, Linino One, or similar device.
+This is a REST API for controlling an Arduino Yun, Linino One, or similar device.
 
 Requirements:
 ---
@@ -21,6 +21,7 @@ Setup:
 ```
 Examples:
 ---
+- GPIO
 ```
 http://arduino.local:8080/gpio/export/13 (export pin D13)
 http://arduino.local:8080/gpio/direction/out (change pin direction to out)
