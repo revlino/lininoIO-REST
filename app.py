@@ -3,9 +3,12 @@
 import sys
 import web
 import modules.gpio
+import modules.adc
 
 urls = (
-	'/gpio(.*)', 'GPIO'
+	'/gpio(.*)', 'GPIO',
+	'/adc(.*)', 'ADC',
+	
 )
 app = web.application(urls, globals())
 
@@ -113,6 +116,57 @@ class GPIO:
 
 				try:
 					return modules.gpio.read_value(*args)
+					
+				except:
+					return sys.exc_info()[1]
+					
+			return self.manual
+
+
+class ADC:
+
+	def __init__(self):
+		
+		f = open('/opt/lininoIO-REST/manual/adc.txt', 'r')
+		self.manual = f.read()
+		f.close()
+
+	
+	def GET(self, args):
+		
+		args = args.split("/")
+		
+		tmp_args = []
+		for arg in args:
+			
+			if arg.strip():
+				
+				tmp_args.append(arg)
+		
+		args = tmp_args
+
+		if not args:
+			
+			return self.manual
+		
+		if args[0].lower() == 'export':
+			
+			if len(args) == 1:
+				
+				try:
+					return modules.adc.export(*args)
+					
+				except:
+					return sys.exc_info()[1]
+
+			return self.manual		
+			
+		else:
+				
+			if len(args) == 1:
+
+				try:
+					return modules.adc.read_value(*args)
 					
 				except:
 					return sys.exc_info()[1]
