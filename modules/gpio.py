@@ -62,7 +62,7 @@ def get_pin(pin):
 		
 		print(type(pin))
 		
-		raise PinError("'%s' is not a a gpio pin." % str(pin))
+		raise PinError("'%s' is not a gpio pin." % str(pin))
 
 
 def read_direction(pin):
