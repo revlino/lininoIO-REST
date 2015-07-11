@@ -26,6 +26,13 @@ Examples:
 http://arduino.local:8080/gpio/export/13 (export pin D13)
 http://arduino.local:8080/gpio/direction/out (change pin direction to out)
 http://arduino.local:8080/gpio/13/1 (send HIGH to pin D13)
-http://arduino.local:8080/gpio/13/ (read vaue of pin D13)
+http://arduino.local:8080/gpio/13/ (read value of pin D13)
 http://arduino.local:8080/gpio/unexport/13 (unexport pin D13)
+```
+- A/D Converter
+```
+http://arduino.local:8080/adc/export (export analog pins)
+http://arduino.local:8080/adc/scale/5 (read scale of pin A5)
+http://arduino.local:8080/adc/voltage/5 (read voltage of pin A5 in microVolts)
+http://arduino.local:8080/adc/5 (read value of pin A5, 0 - 1024)
 ```
