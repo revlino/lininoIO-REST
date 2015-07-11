@@ -20,10 +20,10 @@ Setup:
 ```
 Examples:
 --
-```c
-- http://arduino.local:8080/gpio/export/13 (export pin D13)
-- http://arduino.local:8080/gpio/direction/out (change pin direction to out)
-- http://arduino.local:8080/gpio/13/1 (send HIGH to pin D13)
-- http://arduino.local:8080/gpio/13/ (read vaue of pin D13)
-- http://arduino.local:8080/gpio/unexport/13 (unexport pin D13)
+```
+http://arduino.local:8080/gpio/export/13 (export pin D13)
+http://arduino.local:8080/gpio/direction/out (change pin direction to out)
+http://arduino.local:8080/gpio/13/1 (send HIGH to pin D13)
+http://arduino.local:8080/gpio/13/ (read vaue of pin D13)
+http://arduino.local:8080/gpio/unexport/13 (unexport pin D13)
 ```
