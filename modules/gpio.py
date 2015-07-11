@@ -125,7 +125,7 @@ def read_value(pin):
 	
 	# read value
 	f = open('/sys/class/gpio/%s/value' % pins[pin]['name'],'r')
-	value = f.read().strip()
+	value = int(f.read().strip())
 	f.close()
 
 	return value
