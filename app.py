@@ -154,7 +154,7 @@ class ADC:
 			if len(args) == 1:
 				
 				try:
-					return modules.adc.export(*args)
+					return modules.adc.export()
 					
 				except:
 					return sys.exc_info()[1]
@@ -163,10 +163,10 @@ class ADC:
 			
 		else:
 				
-			if len(args) == 1:
+			if len(args) == 2:
 
 				try:
-					return modules.adc.read_value(*args)
+					return modules.adc.read_value(*args[1:])
 					
 				except:
 					return sys.exc_info()[1]
