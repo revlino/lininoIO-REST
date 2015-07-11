@@ -15,7 +15,7 @@ Setup:
 - Start the server with the following command:
   python /opt/lininoIO_REST/app.py
 - Access the API:
-```c
+```
   http://arduino.local:8080/
 ```
 Examples:
