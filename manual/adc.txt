@@ -1,0 +1,33 @@
+Export Analog pins
+
+	url:		/adc/export
+	
+	returns:	None or error
+
+
+Read the scale of an Analog pin
+
+	url:		/adc/scale/$pin
+	
+	pin:		0, 1, 2, 3, 4, 5
+	
+	returns:	scale (4882) or error
+
+
+Read the voltage of an Analog pin
+
+	url:		/adc/voltage/$pin
+	
+	pin:		0, 1, 2, 3, 4, 5
+	
+	returns:	voltage in microVolts or error
+
+
+Read the value of an Analog pin
+
+	url:		/adc/$pin
+	
+	pin:		0, 1, 2, 3, 4, 5
+	
+	returns:	value (0 - 1024) or error
+
