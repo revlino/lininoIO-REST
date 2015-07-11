@@ -41,15 +41,13 @@ def get_pin(pin):
 	
 	if isinstance(pin,int):
 		
-		if not pins[pin]['id']:
+		if not pin in pins:
 	
 			raise PinError("Pin '%d' is not an analog pin." % pin)
 			
 		return pin
 			
 	else:
-		
-		print(type(pin))
 		
 		raise PinError("'%s' is not an analog pin." % str(pin))
 
@@ -80,7 +78,7 @@ def read_value(pin):
 		f = open('/sys/bus/iio/devices/iio:device0/in_voltage_%s_raw' % pins[pin]['name'],'r')
 		value = f.read().strip()
 		f.close()
-	
+		
 	except IOError:
 		
 		raise PinError("Analog pins are not enabled.")
