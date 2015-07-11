@@ -1,0 +1,72 @@
+Export GPIO pin and declare a mode (direction)
+
+	url:		/gpio/mode/$pin/$mode
+	
+	pin:		2, 3, 4, 5, 6, 8, 9, 10, 11, 12, or 13
+	mode: 	in or out
+	
+	returns:	nothing or error
+
+
+Read mode of a GPIO pin
+
+	url:		/gipo/mode/$pin
+	
+	pins:	2, 3, 4, 5, 6, 8, 9, 10, 11, 12, or 13
+	
+	returns: 	INPUT, OUTPUT, or error
+
+
+Write a value to a GPIO pin with the mode OUTPUT
+	
+	url:		/gpio/$pin/$value
+	
+	pin:	2, 3, 4, 5, 6, 8, 9, 10, 11, 12, or 13
+	value:	0 or 1
+	
+	returns: 	nothing or error
+
+
+Read a value from a GPIO pin
+
+	url:		/gpio/$pin
+	
+	pin:	2, 3, 4, 5, 6, 8, 9, 10, 11, 12, or 13
+	
+	returns:	0, 1, or error
+	
+
+Export GPIO pin.  Direction defaults to INPUT.
+
+	url: 		/gpio/export/$pin
+	
+	pin:	2, 3, 4, 5, 6, 8, 9, 10, 11, 12, or 13
+	
+	returns: 	nothing or error
+	
+Unexport GPIO pin.
+
+	url:		/gpio/unexport/$pin
+	
+	pin:	2, 3, 4, 5, 6, 8, 9, 10, 11, 12, or 13
+	
+	returns: 	nothing or error
+	
+
+Read direction of a GPIO pin.
+
+	url:		/gpio/direction/$pin
+	
+	pins:	2, 3, 4, 5, 6, 8, 9, 10, 11, 12, or 13
+	
+	returns: 	INPUT, OUTPUT, or error
+
+
+Write direction of a GPIO pin.
+
+	url:		/gpio/direction/$pin/$mode
+	
+	pins:	2, 3, 4, 5, 6, 8, 9, 10, 11, 12, or 13
+	mode: 	in or out
+	
+	returns: 	nothing or error
