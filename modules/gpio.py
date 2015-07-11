@@ -60,8 +60,6 @@ def get_pin(pin):
 			
 	else:
 		
-		print(type(pin))
-		
 		raise PinError("'%s' is not a gpio pin." % str(pin))
 
 
